@@ -24,6 +24,8 @@ function noteReleased(event){
   }else{
     changeColour(key, "#000000");
   }
+  key.removeEventListener('mouseout', noteReleased, true);
+  key.removeEventListener('mouseup', noteReleased, true);
 }
 
 function playSound(noteValue){
