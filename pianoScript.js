@@ -6,9 +6,8 @@ function loadPiano(){
 function notePressed(event){
   var key = event.target
 
-  //Use later for assigning correct sound-----------------
+  //Use for assigning correct sound
   var noteValue = key.getAttribute("data-piano-key");
-  //------------------------------------------------------
 
   var colourClass = key.getAttribute("class");
   changeColour(key, "lightgrey");
