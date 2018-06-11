@@ -11,7 +11,7 @@ function notePressed(event){
 
   var colourClass = key.getAttribute("class");
   changeColour(key, "lightgrey");
-  playSound(noteValue);
+  playNote(noteValue);
   key.addEventListener('mouseout', noteReleased, true);
   key.addEventListener('mouseup', noteReleased, true);
 }
@@ -28,7 +28,7 @@ function noteReleased(event){
   key.removeEventListener('mouseup', noteReleased, true);
 }
 
-function playSound(noteValue){
+function playNote(noteValue){
   var audio = new Audio('audio/'+ noteValue +'.wav');
   audio.play();
 }
