@@ -9,7 +9,6 @@ function notePressed(event){
   //Use for assigning correct sound
   var noteValue = key.getAttribute("data-piano-key");
 
-  var colourClass = key.getAttribute("class");
   changeColour(key, "lightgrey");
   playNote(noteValue);
   key.addEventListener('mouseout', noteReleased, true);
